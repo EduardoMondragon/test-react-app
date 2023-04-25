@@ -2,7 +2,12 @@ pipeline{
     agent any 
     tools {nodejs 'NODEJS'}
     stages{
-        stage('Fetch dependencies'){
+        stage("cheking npm version"){
+            steps{
+                sh "npm version"
+            }
+        }
+        stage('install dependencies'){
             steps{
                 sh 'npm install'
             }
