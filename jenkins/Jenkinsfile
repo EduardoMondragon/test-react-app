@@ -1,0 +1,16 @@
+pipeline{
+    agent any 
+    tools {nodejs 'nodecito'}
+    stages{
+        stage('Fetch dependencies'){
+            steps{
+                sh 'npm install'
+            }
+        }
+        stage('Test the testing files'){
+            steps{
+                sh 'npm test'
+            }
+        }
+    }
+}
