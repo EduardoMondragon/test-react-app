@@ -10,7 +10,6 @@ pipeline{
     //     DOCKER_REPOSITORY_NAME = "reactdocker"
     //     DOCKER_IMAGE_TAG = "latest"
     // }
-    
     stages{
         stage("cheking npm version"){
             steps{
