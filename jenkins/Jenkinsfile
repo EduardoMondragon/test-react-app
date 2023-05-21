@@ -1,15 +1,15 @@
 pipeline{
     agent any 
     tools {nodejs "NODEJS"}
-    // environment {
-    //     AWS_ACCOUNT_ID = "448926670056"
-    //     REGION = "us-east-1"
-    //     DOCKER_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
-    //     AWS_ECR_JENKINS_ACCESS = credentials("ECR_AWS_JENKINS_ACCESS")
-    //     APP_NAME = "react-app-paps"
-    //     DOCKER_REPOSITORY_NAME = "reactdocker"
-    //     DOCKER_IMAGE_TAG = "latest"
-    // }
+    environment {
+        AWS_ACCOUNT_ID = "448926670056"
+        REGION = "us-east-1"
+        DOCKER_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
+        AWS_ECR_JENKINS_ACCESS = credentials("ecr_aws_key")
+        APP_NAME = "react-app-myTest1"
+        DOCKER_REPOSITORY_NAME = "reactdocker"
+        DOCKER_IMAGE_TAG = "latest"
+    }
     stages{
         stage("cheking npm version"){
             steps{
