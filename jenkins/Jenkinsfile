@@ -34,7 +34,6 @@ pipeline{
         stage("deploy"){
             steps{
                 script{
-
                     docker.withRegistry(
                     "https://${DOCKER_REGISTRY}",
                     "ecr:${REGION}:${AWS_ECR_JENKINS_ACCESS}"){
