@@ -33,7 +33,6 @@ pipeline{
         }
         stage("deploy"){
             steps{
-
                 script{       
                     docker.withRegistry(
                     "https://${DOCKER_REGISTRY}",
