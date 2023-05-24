@@ -37,6 +37,7 @@ pipeline{
                     docker.withRegistry(
                     "https://${DOCKER_REGISTRY}",
                     "ecr:${REGION}:${AWS_ECR_JENKINS_ACCESS}"){
+                        
                         def myImage = docker.build("${DOCKER_REPOSITORY_NAME}")
                         myImage.push("${DOCKER_IMAGE_TAG}")
                     }
