@@ -1,6 +1,7 @@
 pipeline{
     agent any 
     tools {nodejs "NODEJS"}
+    
     // environment {
     //     AWS_ACCOUNT_ID = "448926670056"
     //     REGION = "us-east-1"
